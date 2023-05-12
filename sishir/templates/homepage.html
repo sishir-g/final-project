@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="homepage-index.js"></script>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+        <link rel="stylesheet" href="{% static 'homepage-global.css' %}">
+        <link  href="{% static 'homepage-index.css' %}" rel="stylesheet"/>
+
+        <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap' %}" />
+
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,900;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="home.js" ></script>
+     -->
+
+
+
+
+    </head>
+
+    <body>
+
+
+        <!-- <header>
+            <p class="Logo">DailyAT</p>
+            <input type="checkbox" name="" class="btn" />
+
+            <!-- <a href="#" class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a> -->
+
+        <!-- <div class="nav">
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Feature</a></li>
+                    <li><a href="#">AboutUs</a></li>
+                    <li class="register-tag"><a href="#">Register</a></li>
+                </ol>
+
+            </div>
+
+        </header> -->
+
+
+
+
+
+
+
+        <div>
+
+
+
+            <div class="desktop-5">
+
+                <header class="navs">
+                    <div class="navbar">
+                        <div class="logo"><a href="#">DailyAT</a></div>
+                        <ul class="links">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">AboutUs</a></li>
+                            <li><a href="#">Feature</a></li>
+
+
+                        </ul>
+                        <a href="/registrations/" class="action_btn">Register</a>
+                        <!-- <a href="/registrations" class="action_btn">Register</a> -->
+                        <div class="toggle-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                    <div class="dropdown_menu">
+                        <ul class="links">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">AboutUs</a></li>
+                            <li><a href="#">Feature</a></li>
+                            <li><a href="registration-index1.html" class="action_btn">Register</a></li>
+                        </ul>
+                    </div>
+                </header>
+
+                <img class="students-or-employees-adding-e" alt="" src="{% static 'img.png' %}" />
+                <div class="fade-in-text">
+                    <b class="submit-your-attendence-container">
+                        <p class="submit">submit</p>
+                        <p class="your-attendence">your attendence</p>
+                    </b>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="wrap">
+            <button class="button">Submit</button>
+        </div>
+
+        <script>
+
+
+
+            const toggleBtn = document.querySelector(".toggle-btn");
+            const toggleBtnIcon = document.querySelector(".toggle-btn i");
+            const dorpDownMenu = document.querySelector(".dropdown_menu");
+
+            toggleBtn.onclick = function () {
+                dorpDownMenu.classList.toggle("open");
+                const isOpen = dorpDownMenu.classList.contains("open");
+
+                toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"
+            };
+
+        </script>
+
+    </body>
+
+</html>

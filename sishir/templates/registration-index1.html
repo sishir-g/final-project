@@ -1,0 +1,112 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'registration-design1.css' %}">
+    <script src="{% static 'registration-script.js' %}"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">Registration</div>
+      <div class="content">
+        <form action="#" method="post">
+          <div class="user-details">
+
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" placeholder="Enter name" required>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Roll-Number</span>
+              <input type="text" placeholder="Enter roll number" required>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Semester</span>
+              <input type="text" placeholder="Enter semester" required>
+            </div>
+
+
+            <div class="input-box">
+              <span class="details">Subject</span>
+              <input type="text" placeholder="Enter semester" required>
+            </div>
+
+
+            <div class="input-box">
+              <span class="details">Registration number</span>
+              <input type="text" placeholder="Enter registration number" required>
+            </div>
+
+
+            <div class="input-box">
+              <span class="details">Address</span>
+              <input type="text" placeholder="Enter address" required>
+            </div>
+
+
+            <div class="input-box">
+              <span class="details">University</span>
+              <input type="text" placeholder="Enter university name" required>
+            </div>
+
+            <div class="input-box">
+              <span class="details">College</span>
+              <input type="text" placeholder="Enter collage name" required>
+            </div>
+
+          </div>
+          <div class="course-details">
+            <input type="radio" name="courser" id="dot-1">
+            <input type="radio" name="courser" id="dot-2">
+            <span class="courser-title">Courser</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="course">Honors</span>
+              </label>
+
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="course">Pass</span>
+              </label>
+            </div>
+          </div>
+<!--            <div class="button1">-->
+<!--            <input type="file" value="Take photo" />-->
+<!--          </div>-->
+            <div class="button1">
+            <input type="button" value="Take photo" onclick="takePhoto()">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        function takePhoto(){
+            $.ajax({
+              url: "takephoto",
+             context: document.body
+            }).done(function() {
+             alert('Photo Captured Successfully !');;
+            });
+        }
+    </script>
+</div>
+
+          <div class="button2">
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+
+  </body>
+
+</html>
